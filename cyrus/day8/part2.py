@@ -1,21 +1,8 @@
 # Advent of Code 2021 Day 8 Part 2 solution
 # Cyrus Sadeghi
 
-def confirmed(segment_values, idx):
-    confirmed_val = segment_values[idx]
-
-    for digit in segment_values.keys():
-        if idx == digit:
-            continue
-
-        if confirmed_val in segment_values[digit]:
-            segment_values[digit].remove(confirmed_val)
-
-        if len(segment_values[digit]) == 1:
-            segment_values[digit] = segment_values[digit][0]
-
 def main():
-    in_file = open('input.txt', 'r')
+    in_file = open('ginput.txt', 'r')
     allpatterns = list()
     alloutputs = list()
     total = 0
