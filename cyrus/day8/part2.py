@@ -2,7 +2,7 @@
 # Cyrus Sadeghi
 
 def main():
-    in_file = open('ginput.txt', 'r')
+    in_file = open('input.txt', 'r')
     allpatterns = list()
     alloutputs = list()
     total = 0
@@ -76,7 +76,6 @@ def main():
                 segment_values[9] = segment
                 segment_values[0].remove(segment)
                 segment_values[0] = segment_values[0][0]
-
 
         inv_values = {v: k for k, v in segment_values.items()}
         output_val = 0
