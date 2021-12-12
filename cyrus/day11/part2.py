@@ -1,4 +1,4 @@
-# Advent of Code 2021 Day 11 Part 1 solution
+# Advent of Code 2021 Day 11 Part 2 solution
 # Cyrus Sadeghi
 
 def get_adjacent(idx, dimension):
