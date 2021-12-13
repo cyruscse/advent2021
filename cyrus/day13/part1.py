@@ -1,15 +1,6 @@
 # Advent of Code 2021 Day 13 Part 1 solution
 # Cyrus Sadeghi
 
-def print_grid(points, dimension):
-    for i in range(0, dimension):
-        for j in range(0, dimension):
-            if (j, i) in points:
-                print('x', end='')
-            else:
-                print(' ', end='')
-        print()
-
 def fold_grid_x(points, foldpt):
     newpoints = set()
 
@@ -39,7 +30,6 @@ def main():
     reading_folds = False
     points = set()
     folds = list()
-    dimension = 0
 
     for line in in_file:
         line = line.strip()
@@ -51,13 +41,6 @@ def main():
         if reading_folds == False:
             point = line.split(',')
             point = ((list(map(int, point))[0]), (list(map(int, point))[1]))
-
-            if point[0] > dimension:
-                dimension = point[0]
-
-            if point[1] > dimension:
-                dimension = point[1]
-
             points.add(point)
         else:
             fold = line.split()[2].split('=')
